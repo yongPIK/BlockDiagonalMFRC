@@ -3,9 +3,23 @@ We introduce a novel MFRC framework that overcomes this dependence on attractor 
 
 A Simple Yet Effective Approach to Multi-Functional Reservoir Computing for Chaotic Time-Series Prediction
 
-by
+by J. K. Jiang, X. G. Wang, and Y. Zou
 
-J. K. Jiang, X. G. Wang, and Y. Zou
+Dataset Parameters for Ten Chaotic Systems
+System Name	Data File	Input Dimension	Output Dimension	Reservoir Size
+SprottA	data_SprottA_2000_0.01.dat	3	3	100
+SprottB	data_SprottB_2000_0.01.dat	3	3	100
+SprottC	data_SprottC_2000_0.01.dat	3	3	100
+SprottD	data_SprottD_2000_0.01.dat	3	3	100
+Lorenz	data_Lorenz.dat	3	3	100
+Roessler	data_roessler2_1000_0.01.dat	3	3	100
+Chen	data_chen_1000_0.01.dat	3	3	100
+Sel'kov	data_sel_kov_1000_0.01.dat	2	2	100
+Hyperchaotic Oscillator	data_hyperchaotic_oscillator_1000_0.01.dat	4	4	500
+Hyper SprottB	data_hyper_sprottB_1000_0.01.dat	5	5	500
+
+
+
 
 Function Descriptions
 
