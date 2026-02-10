@@ -30,7 +30,7 @@ Reservoir Computing (RC) has been shown to be an efficient paradigm to predict t
 
 2. Reservoir Hyperparameters for Ten Systems
 
-The values below are randomly generated and then optimized by Bayesian technique. 
+The values below are optimized by Bayesian technique. 
 
 | System Name	| W_in_r |  average degree d | spectral radius ρ |
 | :--- | :--- | :--- | :---|
