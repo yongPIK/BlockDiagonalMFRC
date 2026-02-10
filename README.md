@@ -1,9 +1,16 @@
 # BlockDiagonalMFRC
-We introduce a novel MFRC framework that overcomes this dependence on attractor separation by employing a modular block-diagonal reservoir structure. Our approach orthogonally projects different chaotic attractors into independent sub-regions of the reservoir's phase space, achieving effective spatial decoupling and precise reconstruction.
 
 A Simple Yet Effective Approach to Multi-Functional Reservoir Computing for Chaotic Time-Series Prediction
 
-by J. K. Jiang, X. G. Wang, and Y. Zou
+by Kaiwen Jiang, Xingang Wang, and Yong Zou
+
+Corresponding author: yzou@phy.ecnu.edu.cn
+
+*Abstract:* 
+
+Reservoir Computing (RC) has been shown to be an efficient paradigm to predict time series in chaotic systems. While the extension to Multi-functional Reservoir Computing (MFRC) has become a promising topic, existing methods struggle to handle attractors that are not strictly separated in phase space, severely limiting their applicability. We introduce a novel MFRC framework that overcomes this dependence on attractor separation by employing a modular block-diagonal reservoir structure. Our approach orthogonally projects different chaotic attractors into independent sub-regions of the reservoir's phase space, achieving effective spatial decoupling and precise reconstruction. This architecture deconstructs a high-dimensional dynamic system into multiple low-dimensional sub-modules, each specifically tuned to capture the dynamics of a particular attractor. Based on the natural decoupling observed in the functional network of a reservoir, we further propose incorporating network modularity into the hyperparameter optimization process. This approach enhances the multi-functional capability of the traditional reservoir computing. Numerical validation demonstrates that our MFRC framework shows versatility and performance in scalability, efficiency, heterogeneous compatibility, and robustness to attractor overlap. Therefore, it provides us with a robust and scalable technical framework for multi-functional learning in complex nonlinear systems.
+
+*Files in the zipped folder:*
 
 1. Dataset Parameters for Ten Chaotic Systems
 
@@ -41,23 +48,105 @@ The values below are randomly generated and then optimized by Bayesian technique
 
 3. Function Descriptions
 
-gene_Win(resSize, inSize, add_dim, W_in_a, W_in_type)	
-Generates input weight matrix:
-- resSize: Reservoir size
-- inSize: Input dimension
-- add_dim: Whether to add extra dimension (0/1)
-- W_in_a: Input weight magnitude
-- W_in_type: Weight type (1: uniform distribution, 2: normal distribution)
-
-gene_Wr(resSize, k, eig_rho, W_r_type)	
-Generates internal reservoir weight matrix:
-- resSize: Reservoir size
-- k: Average degree (sparsity)
-- eig_rho: Desired spectral radius
-- W_r_type: Weight type (1: uniform distribution, 2: normal distribution)
-
-Grassberger_Procaccia(dim, data)	Calculates correlation dimension:
-- dim: Embedding dimension
-- data: Input data matrix (rows: time points, columns: dimensions)
-
-
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=1077
+ style='width:807.6pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=349 valign=top style='width:261.85pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>Function Name<span style='mso-tab-count:
+  1'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+  </td>
+  <td width=274 valign=top style='width:205.55pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>Description</span></p>
+  </td>
+  <td width=454 valign=top style='width:12.0cm;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>Parameter</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=349 valign=top style='width:261.85pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-US>gene_<span
+  class=GramE>Win</span></span></span><span class=GramE><span lang=EN-US>(</span></span><span
+  class=SpellE><span lang=EN-US>resSize</span></span><span lang=EN-US>, <span
+  class=SpellE>inSize</span>, <span class=SpellE>add_dim</span>, <span
+  class=SpellE>W_in_a</span>, <span class=SpellE>W_in_type</span>)</span></p>
+  </td>
+  <td width=274 valign=top style='width:205.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>Generates input weight matrix</span></p>
+  </td>
+  <td width=454 valign=top style='width:12.0cm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>- <span class=SpellE>resSize</span>:
+  Reservoir size<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US>- k: Average degree (sparsity)<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US>- <span class=SpellE>eig_rho</span>:
+  Desired spectral radius<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US>- <span class=SpellE>W_r_type</span>:
+  Weight type (1: uniform distribution, 2: normal distribution)</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=349 valign=top style='width:261.85pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-US>gene_<span
+  class=GramE>Wr</span></span></span><span class=GramE><span lang=EN-US>(</span></span><span
+  class=SpellE><span lang=EN-US>resSize</span></span><span lang=EN-US>, k, <span
+  class=SpellE>eig_rho</span>, <span class=SpellE>W_r_type</span>)</span></p>
+  </td>
+  <td width=274 valign=top style='width:205.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>Generates internal reservoir weight
+  matrix</span></p>
+  </td>
+  <td width=454 valign=top style='width:12.0cm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>- <span class=SpellE>resSize</span>:
+  Reservoir size<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US>- k: Average degree (sparsity)<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US>- <span class=SpellE>eig_rho</span>:
+  Desired spectral radius<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US>- <span class=SpellE>W_r_type</span>:
+  Weight type (1: uniform distribution, 2: normal distribution)</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td width=349 valign=top style='width:261.85pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-US>Grassberger_<span
+  class=GramE>Procaccia</span></span></span><span class=GramE><span lang=EN-US>(</span></span><span
+  lang=EN-US>dim, data)</span></p>
+  </td>
+  <td width=274 valign=top style='width:205.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>Calculates correlation dimension</span></p>
+  </td>
+  <td width=454 valign=top style='width:12.0cm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>- dim: Embedding dimension<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US>- data: Input data matrix (rows: time
+  points, columns: dimensions)</span></p>
+  </td>
+ </tr>
+</table>
