@@ -1,8 +1,22 @@
+Modularity Enables Multi-Functional Reservoir Computing for Reconstructing Multiple Chaotic Attractors
+
+by Kaiwen Jiang, Xingang Wang, and Yong Zou
+
+Corresponding author: yzou@phy.ecnu.edu.cn
+
+Abstract:
+
+Reservoir Computing (RC) has been shown to be an efficient paradigm for reconstructing chaotic attractors from time series. While the extension to Multi-functional Reservoir Computing (MFRC) has become a promising topic, existing methods struggle to handle attractors that are not strictly separated in phase space, severely limiting their applicability. We introduce a novel MFRC framework that overcomes this dependence on attractor separation by employing a modular block-diagonal reservoir structure. Our approach assigns different chaotic attractors into independent sub-regions of the reservoir's phase space, achieving effective spatial decoupling and precise reconstruction. This architecture deconstructs a high-dimensional dynamic system into multiple low-dimensional sub-modules, each specifically tuned to capture the dynamics of a particular attractor. Based on the natural decoupling observed in the functional network of a reservoir, we further propose incorporating network modularity into the hyperparameter optimization process. This approach enhances the multi-functional capability of the traditional reservoir computing. The successful reconstruction for attractors from both numerical models and experimental circuits demonstrates that our MFRC framework shows versatility and performance in scalability, efficiency, heterogeneous compatibility, and robustness to attractor overlap. Therefore, it provides us with a robust and scalable technical framework for multi-functional learning in complex nonlinear systems.
+
+
+Files in the zipped folder:
+
 # MFRC code package
 
 MATLAB code, plotting scripts and data results used for the manuscript and for
 the reviewer responses, together with the Python recomputation code provided in
 the reply.
+
 
 ## Directory structure
 
